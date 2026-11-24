@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirror Ball 鏡球團購｜Smooch Home</title>
+<meta name="description" content="鏡球與鍍鉻支架團購，Smooch Home。">
+<meta property="og:title" content="Mirror Ball 鏡球團購｜Smooch Home">
+<meta property="og:description" content="鏡球 290／支架 180／合購 450，7-11 超取。">
+<meta property="og:image" content="images/og.jpg">
+<meta name="theme-color" content="#f3f1ec">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27none%27 stroke=%27%23333%27 stroke-width=%271.6%27/%3E%3Cpath d=%27M5 16h22M16 5c-4 4-4 18 0 22M16 5c4 4 4 18 0 22%27 fill=%27none%27 stroke=%27%23333%27 stroke-width=%271.2%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec; --paper:#fbfaf7; --ink:#2b2a27; --soft:#86837c; --line:#dcd8cf;
+  --accent:#b4655a; /* 取自雜誌封面的乾燥玫瑰色，只用在極少數地方 */
+  --serif:"Noto Serif TC","Songti TC",serif; --en:"EB Garamond",Georgia,serif;
+  --sans:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.en{font-family:var(--en);font-style:italic;letter-spacing:.01em}
+.cap{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,56px);background:rgba(243,241,236,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+header .logo{font-size:11px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none}
+header nav{display:flex;gap:22px;align-items:center}
+header nav a{font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--soft)}
+header nav a.order{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px}
+
+/* 三張圖 */
+.gallery{padding:clamp(24px,6vw,72px) clamp(20px,5vw,56px) 0;max-width:1240px;margin:0 auto;display:grid;gap:clamp(110px,18vw,200px)}
+.gallery figure{width:100%;max-width:760px;margin:0 auto}
+.gallery figcaption{display:flex;justify-content:space-between;gap:12px}
+section{padding:clamp(110px,18vw,200px) clamp(20px,5vw,56px) 0;max-width:1240px;margin:0 auto}
+figcaption{font-size:12px;color:var(--soft);margin-top:12px;letter-spacing:.06em}
+figcaption .en{font-size:14px;color:var(--ink)}
+
+/* 商品 */
+.head{text-align:center;margin-bottom:clamp(48px,8vw,80px)}
+.head h2{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.2em;margin-top:14px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,4vw,56px);max-width:900px;margin:0 auto}
+.item .img{background:#fff;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
+.item .img img{width:78%}
+.item .meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.item .meta .en{font-size:17px}
+.item .meta span:last-child{font-size:13px;white-space:nowrap}
+.item p{font-size:12.5px;color:var(--soft);margin-top:4px;line-height:1.8}
+
+/* 須知 */
+.notes{max-width:460px;margin:0 auto;font-size:13.5px;color:#55534e}
+.notes li{list-style:none;padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:28px 1fr}
+.notes li b{font-family:var(--en);font-weight:400;font-style:italic;color:var(--soft)}
+
+/* 下單 */
+#order{padding-bottom:40px}
+.form{max-width:460px;margin:0 auto}
+.qty{border-top:1px solid var(--ink)}
+.qrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.qrow .nm{font-family:var(--serif);letter-spacing:.08em;font-size:14.5px}
+.qrow .nm small{display:block;font-size:12px;color:var(--soft);font-family:var(--sans);letter-spacing:.04em}
+.step{display:flex;align-items:center;border:1px solid var(--line);background:var(--paper)}
+.step button{width:40px;height:40px;border:0;background:none;font-size:17px;color:var(--ink);cursor:pointer}
+.step button:disabled{color:#c9c5bc;cursor:default}
+.step output{width:30px;text-align:center;font-family:var(--en);font-size:17px}
+.hint{font-size:12px;color:var(--accent);min-height:1.4em;margin-top:8px;letter-spacing:.04em}
+
+.fields{margin-top:48px;display:grid;gap:26px}
+.fields label{display:block;font-size:12px;letter-spacing:.14em;color:var(--soft)}
+.fields label small a{color:inherit}
+.fields label small{letter-spacing:.04em;display:block;font-size:11.5px;color:#a19d95;margin-top:1px}
+.fields input,.fields textarea{display:block;width:100%;font:inherit;font-size:16px;letter-spacing:.02em;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:8px 0;margin-top:4px;resize:vertical}
+.fields ::placeholder{color:#bdb9b0}
+.fields input:focus,.fields textarea:focus{outline:none;border-bottom-color:var(--ink)}
+.chk{display:flex!important;gap:12px;align-items:flex-start;font-size:13.5px!important;color:var(--ink)!important;letter-spacing:.04em!important;cursor:pointer;line-height:1.7}
+.chk input{width:16px!important;height:16px;margin-top:4px!important;flex:none;accent-color:var(--ink)}
+
+.sum{margin-top:44px;font-size:13.5px}
+.sum div{display:flex;justify-content:space-between;padding:5px 0;color:#55534e}
+.sum .tot{border-top:1px solid var(--ink);margin-top:10px;padding-top:14px;color:var(--ink);align-items:baseline}
+.sum .tot span:last-child{font-family:var(--en);font-size:26px}
+.err{color:#a3372b;font-size:13px;min-height:1.5em;margin-top:14px}
+.btn{display:block;width:100%;margin-top:10px;padding:17px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);font:inherit;font-size:13px;letter-spacing:.3em;cursor:pointer;text-align:center;text-decoration:none;transition:background .3s,color .3s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn:disabled{opacity:.5;cursor:wait}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+
+#done{max-width:460px;margin:0 auto;text-align:center}
+#done h3{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.2em;margin:14px 0 30px}
+#done .lines{text-align:left;font-size:13.5px;border-top:1px solid var(--ink);padding-top:14px;white-space:pre-line;line-height:2.1}
+#done .pay{font-family:var(--en);font-size:30px;margin:18px 0 34px}
+#done ol{text-align:left;font-size:13.5px;padding-left:1.3em;color:#55534e}
+#done ol li{padding:3px 0}
+.bank{margin:22px 0 28px;background:var(--paper);padding:18px 20px;text-align:left;font-size:13.5px}
+.bank div{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 0}
+.bank span:first-child{color:var(--soft);font-size:12px;letter-spacing:.12em}
+.bank button{margin-left:10px;border:1px solid var(--line);background:none;font:inherit;font-size:11px;padding:2px 9px;cursor:pointer;letter-spacing:.1em}
+.testmode{font-size:12px;color:var(--accent);margin-bottom:18px}
+.closed{text-align:center;font-family:var(--serif);letter-spacing:.14em}
+
+footer{text-align:center;padding:clamp(110px,16vw,180px) 20px 48px;font-size:11px;letter-spacing:.26em;color:var(--soft);text-transform:uppercase}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* 慢慢浮現 */
+.fade{opacity:0;transform:translateY(18px);transition:opacity 1.4s ease,transform 1.4s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top">Smooch Home</a>
+  <nav><span class="cap" id="dl"></span><a class="order" href="#order">Order</a></nav>
+</header>
+
+<main id="top">
+  <div class="gallery">
+    <figure class="fade">
+      <img src="images/light.jpg" alt="窗邊陽光照在鏡球上，牆面布滿細碎光點" width="1600" height="1600" fetchpriority="high">
+      <figcaption><span class="en">no. 01 — afternoon, 2 pm</span><span>下午兩點，窗邊</span></figcaption>
+    </figure>
+    <figure class="fade">
+      <img src="images/shelf.jpg" alt="鏡球放在玻璃層架上，旁邊有小夜燈和香氛噴霧" width="1600" height="1600" loading="lazy">
+      <figcaption><span class="en">no. 02 — on a glass shelf</span><span>和小物一起擺</span></figcaption>
+    </figure>
+    <figure class="fade">
+      <img src="images/book.jpg" alt="鏡球放在支架上，擱在一本橘色設計書上" width="1600" height="1600" loading="lazy">
+      <figcaption><span class="en">no. 03 — on a book</span><span>放在喜歡的書上</span></figcaption>
+    </figure>
+  </div>
+
+  <section>
+    <div class="head fade"><p class="cap">What you get</p><h2>鏡球與支架</h2></div>
+    <div class="items">
+      <div class="item fade">
+        <div class="img"><img src="images/ball.jpg" alt="銀色鏡球" width="1000" height="1000" loading="lazy"></div>
+        <div class="meta"><span class="en">Mirror Ball</span><span id="pBall"></span></div>
+        <p>直徑 20 cm。鏡片銀色鏡球，頂端附吊環，也可以直接掛起來。</p>
+      </div>
+      <div class="item fade">
+        <div class="img"><img src="images/stand.jpg" alt="鍍鉻螺旋支架" width="1000" height="1000" loading="lazy"></div>
+        <div class="meta"><span class="en">Chrome Stand</span><span id="pStand"></span></div>
+        <p>上圈直徑 6 cm／底圈直徑 8.7 cm。一筆畫般的鍍鉻支架，讓鏡球穩穩立在桌面。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="head fade"><p class="cap">Notes</p><h2>團購須知</h2></div>
+    <ul class="notes fade">
+      <li><b>i.</b><span id="nDead"></span></li>
+      <li><b>ii.</b><span id="nShip"></span></li>
+      <li><b>iii.</b><span>下單後約兩週到貨，到貨後依序寄出。</span></li>
+      <li><b>iv.</b><span>送出訂單後請完成匯款，並私訊 IG <a class="igA" target="_blank" rel="noopener"></a> 告知姓名與帳號後五碼。</span></li>
+      <li><b>v.</b><span>團購為預購商品，下單後無法取消或更改。</span></li>
+    </ul>
+  </section>
+
+  <section id="order">
+    <div class="head fade"><p class="cap">Order</p><h2>下單</h2></div>
+
+    <form class="form" id="form" novalidate>
+      <div class="qty" id="qty"></div>
+      <p class="hint" id="hint" aria-live="polite"></p>
+
+      <div class="fields">
+        <label>姓名<input type="text" name="name" autocomplete="name" required></label>
+        <label>手機<input type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="09xxxxxxxx" required></label>
+        <label>7-11 取貨門市<small>可到 <a href="https://emap.pcsc.com.tw/" target="_blank" rel="noopener">7-11 門市查詢</a> 找門市名稱和店號</small><input type="text" name="store" placeholder="例：信義門市" autocomplete="off" required></label>
+        <label>門市店號<input type="text" name="storeNo" inputmode="numeric" maxlength="6" placeholder="6 碼數字" autocomplete="off" required></label>
+        <label>IG 帳號<small>對帳會以 IG 帳號＋手機為準</small><input type="text" name="ig" placeholder="@" autocapitalize="off" autocomplete="off" required></label>
+        <label>匯款帳號後五碼<small>還沒匯款可以先空著，私訊時再告訴我們</small><input type="text" name="last5" inputmode="numeric" maxlength="5"></label>
+        <label>備註<textarea name="note" rows="2"></textarea></label>
+        <label class="chk"><input type="checkbox" name="agree"><span>我了解團購為預購商品，送出後不棄單、不取消。</span></label>
+      </div>
+
+      <div class="sum" id="sum"></div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" id="submit">送出訂單</button>
+    </form>
+
+    <p class="closed" id="closed" hidden>這一團已經收單了，謝謝大家。<br><span style="font-size:13px;color:var(--soft)">有問題歡迎私訊 IG <a class="igA" target="_blank" rel="noopener"></a></span></p>
+
+    <div id="done" hidden>
+      <p class="cap">Thank you</p>
+      <h3>訂單收到了</h3>
+      <p class="testmode" id="testmode" hidden>測試模式：還沒設定試算表網址，這筆訂單沒有真的送出。</p>
+      <div class="lines" id="doneLines"></div>
+      <p class="pay" id="donePay"></p>
+      <ol><li>匯款到下方帳戶，備註填「<b class="memo"></b>」。</li><li>匯款後私訊 IG <b class="igB"></b>，告訴我們訂單編號和帳號後五碼。</li></ol>
+      <div class="bank" id="bank"></div>
+      <a class="btn" id="igBtn" target="_blank" rel="noopener">私訊 IG</a>
+    </div>
+  </section>
+</main>
+
+<footer>Smooch Home · <a class="igA" target="_blank" rel="noopener"></a></footer>
+
+<script src="config.js"></script>
+<script>
+(() => {
+const S = window.SHOP, P = S.products, $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const money = n => 'NT$' + n.toLocaleString('en-US');
+const igUrl = 'https://www.instagram.com/' + S.ig + '/';
+$$('.igA').forEach(a => { a.href = igUrl; a.textContent = '@' + S.ig; });
+$$('.igB').forEach(b => b.textContent = '@' + S.ig);
+$$('.memo').forEach(b => b.textContent = S.bank.memo);
+$('#igBtn').href = igUrl;
+
+/* 價格 */
+$('#pBall').textContent = money(P.ball.price);
+$('#pStand').textContent = money(P.stand.price);
+const keys = ['ball','stand','set'];
+
+/* 截止日 */
+const end = new Date(S.deadline);
+const md = end.toLocaleDateString('zh-TW',{timeZone:'Asia/Taipei',month:'numeric',day:'numeric'});
+const wd = end.toLocaleDateString('zh-TW',{timeZone:'Asia/Taipei',weekday:'narrow'});
+$('#dl').textContent = `until ${md.replace('/', '.')}`;
+$('#nDead').textContent = `收單至 ${md}（${wd}）23:59，收單後統一叫貨。`;
+$('#nShip').textContent = `只提供 7-11 超商取貨，每筆訂單運費 ${S.shipping} 元。`;
+
+/* 數量 */
+const q = {set:1, ball:0, stand:0};
+$('#qty').innerHTML = keys.map(k => `<div class="qrow"><span class="nm">${P[k].name}<small>${money(P[k].price)}</small></span>
+  <span class="step"><button type="button" data-k="${k}" data-d="-1" aria-label="${P[k].name}減一">−</button><output id="q_${k}">0</output><button type="button" data-k="${k}" data-d="1" aria-label="${P[k].name}加一">＋</button></span></div>`).join('');
+$('#qty').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  q[b.dataset.k] = Math.max(0, Math.min(20, q[b.dataset.k] + +b.dataset.d)); render();
+});
+const totals = () => { const sub = keys.reduce((s,k) => s + q[k]*P[k].price, 0), n = keys.reduce((s,k) => s + q[k], 0); return {sub, n, total: n ? sub + S.shipping : 0}; };
+const lines = () => keys.filter(k => q[k]).map(k => `${P[k].name} × ${q[k]}　${money(q[k]*P[k].price)}`);
+function render(){
+  keys.forEach(k => { $('#q_'+k).textContent = q[k]; $(`button[data-k="${k}"][data-d="-1"]`).disabled = !q[k]; });
+  const pairs = Math.min(q.ball, q.stand);
+  $('#hint').textContent = pairs ? `鏡球＋支架各 ${pairs} 個，改成合購可再省 ${pairs*(P.ball.price+P.stand.price-P.set.price)} 元。` : '';
+  const t = totals();
+  $('#sum').innerHTML = `<div><span>商品小計</span><span>${money(t.sub)}</span></div><div><span>7-11 超取運費</span><span>${t.n ? money(S.shipping) : '—'}</span></div><div class="tot"><span>總計</span><span>${money(t.total)}</span></div>`;
+}
+render();
+
+/* 截止後關單 */
+function closeIfEnded(){
+  if (Date.now() < end.getTime()) return setTimeout(closeIfEnded, 30000);
+  $('#form').hidden = true; $('#closed').hidden = false; $('#dl').textContent = 'closed';
+}
+closeIfEnded();
+
+/* 匯款資訊 */
+$('#bank').innerHTML = `<div><span>銀行</span><span>${S.bank.name}</span></div><div><span>帳號</span><span>${S.bank.account}<button type="button" id="copy">複製</button></span></div><div><span>備註</span><span>${S.bank.memo}</span></div>`;
+$('#copy').onclick = async e => {
+  try { await navigator.clipboard.writeText(S.bank.account); }
+  catch(_) { const t = document.createElement('textarea'); t.value = S.bank.account; document.body.append(t); t.select(); document.execCommand('copy'); t.remove(); }
+  e.target.textContent = '已複製';
+};
+
+/* 送出 */
+const form = $('#form'), err = $('#err');
+form.addEventListener('submit', async e => {
+  e.preventDefault(); err.textContent = '';
+  const f = Object.fromEntries(new FormData(form)); Object.keys(f).forEach(k => f[k] = String(f[k]).trim());
+  const phone = (f.phone||'').replace(/[\s-]/g,''), t = totals();
+  let bad = '';
+  if (!t.n) bad = '請至少選一樣商品。';
+  else if (!f.name) bad = '請填姓名。';
+  else if (!/^09\d{8}$/.test(phone)) bad = '手機請填 09 開頭的 10 碼號碼。';
+  else if (!f.store) bad = '請填 7-11 取貨門市。';
+  else if (!/^\d{6}$/.test(f.storeNo||'')) bad = '門市店號請填 6 碼數字。';
+  else if (!(f.ig||'').replace('@','')) bad = '請填 IG 帳號。';
+  else if (f.last5 && !/^\d{5}$/.test(f.last5)) bad = '匯款帳號後五碼請填 5 個數字，或先留空。';
+  else if (!form.agree.checked) bad = '請勾選不棄單確認。';
+  if (bad) { err.textContent = bad; return; }
+
+  const id = 'MB' + Date.now().toString(36).slice(-5).toUpperCase();
+  const data = {page:'鏡球', orderId:id, name:f.name, phone:"'"+phone, store:f.store, storeNo:"'"+f.storeNo, ig:'@'+f.ig.replace(/^@/,''),
+    last5:f.last5 ? "'"+f.last5 : '', note:f.note||'', items:lines().join('；'),
+    set:q.set, ball:q.ball, stand:q.stand, subtotal:t.sub, shipping:S.shipping, total:t.total};
+  const btn = $('#submit'); btn.disabled = true; btn.textContent = '送出中…';
+  try {
+    if (S.sheetUrl) await fetch(S.sheetUrl, {method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(data)});
+  } catch(_) {
+    btn.disabled = false; btn.textContent = '送出訂單';
+    err.textContent = '送出失敗，請檢查網路後再試一次；還是不行的話請私訊 IG @' + S.ig + '。'; return;
+  }
+  $('#testmode').hidden = !!S.sheetUrl;
+  $('#doneLines').textContent = `訂單編號　${id}\n` + lines().join('\n') + `\n取貨門市　7-11 ${f.store}（${f.storeNo}）\n超取運費　${money(S.shipping)}`;
+  $('#donePay').textContent = money(t.total);
+  form.hidden = true; $('#done').hidden = false;
+  $('#order').scrollIntoView();
+});
+
+/* 浮現 */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), {rootMargin:'0px 0px -8% 0px'}) : null;
+$$('.fade').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+})();
+</script>
+</body>
+</html>
