@@ -231,7 +231,7 @@ $('#nDead').textContent = `收單至 ${md}（${wd}）23:59，收單後統一叫�
 $('#nShip').textContent = `只提供 7-11 超商取貨，每筆訂單運費 ${S.shipping} 元。`;
 
 /* 數量 */
-const q = {set:1, ball:0, stand:0};
+const q = {set:0, ball:0, stand:0};
 $('#qty').innerHTML = keys.map(k => `<div class="qrow"><span class="nm">${P[k].name}<small>${money(P[k].price)}</small></span>
   <span class="step"><button type="button" data-k="${k}" data-d="-1" aria-label="${P[k].name}減一">−</button><output id="q_${k}">0</output><button type="button" data-k="${k}" data-d="1" aria-label="${P[k].name}加一">＋</button></span></div>`).join('');
 $('#qty').addEventListener('click', e => {
